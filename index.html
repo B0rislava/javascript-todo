@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO Приложение</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="container">
+    <h1>TODO Списък</h1>
 
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number" id="totalCount">0</div>
+            <div class="stat-label">Общо</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="activeCount">0</div>
+            <div class="stat-label">Активни</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="completedCount">0</div>
+            <div class="stat-label">Завършени</div>
+        </div>
+    </div>
+
+    <form class="todo-form" id="todoForm">
+        <label for="todoInput" class="visually-hidden">Нова задача</label>
+        <input
+                type="text"
+                class="todo-input"
+                id="todoInput"
+                placeholder="Добави нова задача..."
+                autocomplete="off"
+                required
+        >
+        <button type="submit" class="add-btn">Добави</button>
+    </form>
+
+    <ul class="todo-list" id="todoList"></ul>
+
+    <div class="empty-state hidden" id="emptyState">
+        <p>Нямате задачи. Добавете първата си задача!</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
